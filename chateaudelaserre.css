@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Box sizing */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* header */
+#page{
+  max-width:1200px;
+  margin:auto;
+  margin-top: 40px;
+} 
+
+h1{
+  font-size: 40px;
+  margin-right: 50px;
+  margin-left: 35px;
+  min-width: 180px;
+  width:100%;
+  font-family:  'Oswald', sans-serif;
+  /* text-decoration: none; */
+  color:black;
+  text-align: center;
+
+}
+
+h1:hover{
+    transform: scale(1.08);
+  }
+  
+
+
+header{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  nav {
+    width:100%;
+    font-family:  'Oswald', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    
+  }
+
+  #menu{
+    display:none;
+  }
+  
+  .menu-mobile{
+    display:none;
+  }
+  
+  
+  ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height:100%;
+    align-items: center;
+  }
+
+
+  @media screen and (max-width : 800px){
+  
+    .menu-mobile{
+      display:block;
+      position:fixed;
+      top : 1px;
+      right:2px;
+      width:100px;
+      height:100px;
+      line-height:100px;
+      text-align:center;
+      cursor:pointer;
+      z-index:900;
+    }
+    
+  .menu-mobile:after {
+    content: "MENU";
+  }
+    
+    #menu:checked ~ .menu-mobile:after {
+      content: "X";
+    }
+    
+    nav ul {
+      display:none;
+    } 
+   
+    #menu:checked ~ ul{
+      display:flex;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100vw;
+      height:100vh;
+      background-color:whitesmoke;
+      flex-direction:column;
+      justify-content: space-around;
+    }
+  }
+
+  /* slider */
+#slider {
+    /* margin-bottom: 80px; */
+    max-width: 750px;
+    overflow:hidden;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+   #slider figure{
+    display:flex;
+    width: 500%;
+    animation: 18s slidy infinite;
+  }
+  
+  #slider > figure > span {
+    width:100%;
+  }
+  
+  #slider > figure > span > img {
+    max-width:100%;
+    height:auto;
+  }
+  
+  @keyframes slidy {
+    0% { margin-left: 0%; }
+    20% { margin-left: 0%; }
+    25% { margin-left: -100%; }
+    45% { margin-left: -100%; }
+    50% { margin-left: -200%; }
+    70% { margin-left: -200%; }
+    75% { margin-left: -300%; }
+    95% { margin-left: -300%; }
+    100% { margin-left: -400%; }
+  }
+
+  #text{
+      width: 750px;
+      font-family: roboto;
+      font-size: 18px;
+      text-align: center;
+      margin: auto;
+      min-width: 500px;
+ }
+
+ #text1{
+  width: 750px;
+  font-family: roboto;
+  font-size: 18px;
+  text-align: center;
+  margin: auto;
+  min-width: 500px;
+}
+
+ h3{ font-size: 24px;
+    font-family: Roboto;
+}
+
+
+h4{
+  font-family: lato;
+  font-size: 24px;
+}
+
+#photos img{
+  width:100%;
+  height:auto;
+}
+
+.grandeimage {
+  min-width: 50%;
+  width: calc((900px - 100%) * 1000);
+  max-width: 100%;
+}
+.grandeimage:hover {
+  transform: scale(1.01); 
+}
+
+.petiteimage {
+  min-width: 33%;
+  width: calc((900px - 100%) * 1000);
+  max-width: 100%;
+}
+
+.petiteimage:hover {
+  transform: scale(1.01); 
+}
+
+#photos{
+  display:flex;
+  margin-bottom:300px;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: roboto;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=Envoyer] {
+  background-color: darkgray;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: roboto;
+}
+label{
+  font-family: roboto;
+}
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+  .footer{
+    color: grey;
+    font-size: 12px;
+    margin-top: 50px;
+    padding: 20px;
+    font-family: lato;
+    text-align: center;
+    /* background-color: whitesmoke; */
+  }
+  
