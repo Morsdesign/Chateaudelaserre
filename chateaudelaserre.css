@@ -70,10 +70,7 @@ h1{
   font-size: 40px;
   margin-right: 50px;
   margin-left: 35px;
-  min-width: 180px;
-  width:100%;
   font-family:  'Oswald', sans-serif;
-  /* text-decoration: none; */
   color:black;
   text-align: center;
 
@@ -195,21 +192,20 @@ header{
   }
 
   #text{
-      width: 750px;
+      
       font-family: roboto;
       font-size: 18px;
       text-align: center;
       margin: auto;
-      min-width: 500px;
+
  }
 
  #text1{
-  width: 750px;
   font-family: roboto;
   font-size: 18px;
   text-align: center;
   margin: auto;
-  min-width: 500px;
+  margin-top: 60px;
 }
 
  h3{ font-size: 24px;
@@ -218,8 +214,8 @@ header{
 
 
 h4{
-  font-family: lato;
-  font-size: 24px;
+  font-family: Oswald;
+  font-size: 26px;
 }
 
 #photos img{
@@ -252,6 +248,7 @@ h4{
   flex-wrap:wrap;
   justify-content: space-between;
 }
+ /* formulaire contact */
 
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
